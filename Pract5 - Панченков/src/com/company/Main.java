@@ -3,11 +3,11 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-
-    boolean f=false;
-
     public static void main(String[] args) {
-        System.out.println(palindrome_8());
+        Scanner an = new Scanner(System.in);
+        String s=an.next();
+        int p=0;
+        palindrome_8(s,p);
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
         int b = in.nextInt();
@@ -16,14 +16,12 @@ public class Main {
         System.out.println(razvorot_10(c,0));
     }
 
-    public static boolean palindrome_8() {
-        Scanner in = new Scanner(System.in);
-        String s=in.next();
-        for (int i=0;i<s.length();i++){
-            if (s.charAt(i)!=s.charAt(s.length()-i-1))
-                return false;
+    public static void palindrome_8(String s, int i) {
+        if (s.charAt(i)==s.charAt(s.length()-i-1)) {
+            if (i<=(s.length()/2)) palindrome_8(s, i+1);
+            else System.out.println("Yes");
         }
-        return true;
+        else System.out.println("No");
     }
 
     public static int null_9(int a, int b){
