@@ -18,7 +18,7 @@ public class Main extends JFrame {
         result.setBounds(17,160,500,20);
         setSize(new Dimension(500, 500));
         Random rand = new Random();
-        int chislo = rand.nextInt(2);
+        int chislo = rand.nextInt(21);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
